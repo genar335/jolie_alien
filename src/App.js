@@ -1,12 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/layout/Navbar'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>Here be the site</h1>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+
+        <Route exact path="/about" render={props => (
+          <div>
+            Hello
+          </div>
+        )} />
+          
+      </div>
+    </Router>
   );
 }
 
