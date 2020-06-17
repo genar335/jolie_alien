@@ -4,10 +4,29 @@ import MenuRoundedIcon from '@material-ui/icons/MenuRounded'
 import { useTransition, useSpring, useTrail, animated, config } from 'react-spring'
 import '../layoutStyles/Navbar.scss'
 
+const listedLinks = [
+    { name: 'Диджей с Пеленок', url: ''},
+    { name: 'О Нас', url: 'about'},
+    { name: 'Курсы', url: 'courses'} ,
+    { name: 'Команда', url: 'team'},
+    { name: 'Контакты', url: 'contact' }
+]
+
+function Heading({url}) {
+    console.log(url);
+    return (
+        <h1 className="site-name">
+            {
+            (listedLinks.find(link=>link.url===url)||{name:"not found"}).name
+            }
+        </h1>
+    )
+}
+
 function Navbar() {
    
     const [burgerState, setBurgerState] = useState(false)
-    const [navPosition, setNavPosition] = useState(-10)
+    const [navPosition, setNavPosition] = useState(0)
 
     // scrolling, hackyAF
     let prevScroll = window.pageYOffset
@@ -53,13 +72,7 @@ function Navbar() {
     })
 
     // returning array of links
-    const listedLinks = [
-        { name: 'Home', url: ''},
-        { name: 'About', url: 'about'},
-        { name: 'Courses', url: 'courses'} ,
-        { name: 'Team', url: 'team'},
-        { name: 'Contact', url: 'contact' }
-    ]
+    
     const Links = listedLinks.map(link => 
         <Link 
             to={`/${link.url}`}
@@ -84,7 +97,8 @@ function Navbar() {
 
     // adjusting class for navbar depending on location
     const classList = ["navbar-container"];
-    classList.push(window.location.pathname.replace(/\//g, ""));
+    const url = window.location.pathname.replace(/\//g, "")
+    classList.push(url);
 
     return(
         <div 
@@ -93,8 +107,8 @@ function Navbar() {
                 top: `${navPosition}rem`
             }}
             >
-
-            <h1 id="site-name" >The Name</h1>
+        
+            <Heading url={url} />
 
             <animated.div 
                 id="burger-container"

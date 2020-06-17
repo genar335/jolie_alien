@@ -8,7 +8,6 @@ function About(props) {
 
     return(
         <div className="abt-main-container">
-            <h2>О Нас</h2>
             <div className="big-img-container">
                 <img src={testPic} alt="kartinka" id="abt-big-img"/>
             </div>
