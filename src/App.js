@@ -3,7 +3,9 @@ import './App.css';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import About from './components/About.jsx';
+import Courses from './components/Courses.jsx';
 import Team from './components/Team.jsx';
+import Contact from './components/Contact.jsx';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
@@ -24,9 +26,7 @@ function App() {
         )} />
 
         <Route exact path="/courses" render={props => (
-          <div>
-            all the courses
-          </div>
+          <Courses />
         )} />
 
         <Route exact path="/team" render={props => (
@@ -34,9 +34,7 @@ function App() {
         )} />
 
         <Route exact path="/contact" render={props => (
-          <div>
-            Some contact info
-          </div>
+          <Contact />
         )} />
 
         {/* Social media routing */}

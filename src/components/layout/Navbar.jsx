@@ -5,7 +5,7 @@ import { useTransition, useSpring, useTrail, animated, config } from 'react-spri
 import '../layoutStyles/Navbar.scss'
 
 const listedLinks = [
-    { name: 'Диджей с Пеленок', url: ''},
+    { name: 'ХОПЛЯ', url: ''},
     { name: 'О Нас', url: 'about'},
     { name: 'Курсы', url: 'courses'} ,
     { name: 'Команда', url: 'team'},
