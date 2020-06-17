@@ -7,15 +7,36 @@ import '../layoutStyles/Navbar.scss'
 function Navbar() {
    
     const [burgerState, setBurgerState] = useState(false)
+    const [navPosition, setNavPosition] = useState(-10)
 
-    const  [scrollPosition, setScrollPosition] = useState(0)
-    const handleScroll = () => 
-        setScrollPosition(window.pageYOffset)
+    // scrolling, hackyAF
+    let prevScroll = window.pageYOffset
+    const handleScroll = (e) => {
+        //console.log(window.scrollY)
+        
+        if (prevScroll > window.pageYOffset) {
+            setNavPosition(0) 
+            if (document.getElementById('link-container')) {
+                document.getElementById('link-container').style.marginTop = "0rem"
+                console.log('up')
+            }
+        } else {
+            setNavPosition(-10)
+            if (document.getElementById('link-container')) {
+                document.getElementById('link-container').style.marginTop = "10rem"
+                console.log('up')
+            }
+        }
+        prevScroll = window.pageYOffset
+    }
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll, { passive: true })
-        return window.removeEventListener('scroll', handleScroll)
-    }, [])
+        document.title = `${window.scrollY}`
+        window.addEventListener('scroll', (() => handleScroll() ))
+        return window.removeEventListener('scroll', function(e) { console.log(123) })
+    }, [null])
+
+    
 
     // animation for burger icon rotation
     const { degree } = useSpring({
@@ -66,7 +87,12 @@ function Navbar() {
     classList.push(window.location.pathname.replace(/\//g, ""));
 
     return(
-        <div className={classList.join(" ")} onScroll={handleScroll} >
+        <div 
+            className={classList.join(" ")} 
+            style={{
+                top: `${navPosition}rem`
+            }}
+            >
 
             <h1 id="site-name" >The Name</h1>
 
