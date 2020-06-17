@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded'
 import { useTransition, useSpring, useTrail, animated, config } from 'react-spring'
@@ -7,6 +7,15 @@ import '../layoutStyles/Navbar.scss'
 function Navbar() {
    
     const [burgerState, setBurgerState] = useState(false)
+
+    const  [scrollPosition, setScrollPosition] = useState(0)
+    const handleScroll = () => 
+        setScrollPosition(window.pageYOffset)
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll, { passive: true })
+        return window.removeEventListener('scroll', handleScroll)
+    }, [])
 
     // animation for burger icon rotation
     const { degree } = useSpring({
@@ -52,11 +61,12 @@ function Navbar() {
         config
     })
 
+    // adjusting class for navbar depending on location
     const classList = ["navbar-container"];
     classList.push(window.location.pathname.replace(/\//g, ""));
 
     return(
-        <div className={classList.join(" ")} >
+        <div className={classList.join(" ")} onScroll={handleScroll} >
 
             <h1 id="site-name" >The Name</h1>
 

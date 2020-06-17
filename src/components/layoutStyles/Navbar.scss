@@ -5,6 +5,9 @@ $navigation-color: #1B1725;
     justify-content: space-between;
     z-index: 0;
     background-color: #17B890;
+    top: 0;
+    position: fixed;
+    width: 100%;
 
     #site-name {
         margin-left: 1rem;
@@ -13,6 +16,8 @@ $navigation-color: #1B1725;
 
     #burger-container {
         z-index: 2;
+        /* position: fixed;
+        right: 0; */
     }
 
     #link-container {
