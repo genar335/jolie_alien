@@ -30,7 +30,7 @@ function Navbar(props) {
             <animated.div 
                 id="burger-container"
                 style={{
-                    transform: degree.interpolate(degree => rotate(${degree}deg)),
+                    transform: degree.interpolate(degree => `rotate(${degree}deg)`),
                     opacity: 1
                 }}
             >
