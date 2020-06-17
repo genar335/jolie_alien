@@ -6,7 +6,7 @@ import About from './components/About.jsx';
 import Courses from './components/Courses.jsx';
 import Team from './components/Team.jsx';
 import Contact from './components/Contact.jsx';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 
 
 function App() {
@@ -16,9 +16,7 @@ function App() {
         <Navbar />
 
         <Route exact path="/" render={props => (
-          <div>
-            Home
-          </div>
+          <Redirect from="/" to="/about" />
         )} />
 
         <Route exact path="/about" render={props => (
