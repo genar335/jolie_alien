@@ -17,7 +17,7 @@
     .contacts-container {
 
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
 
         .contactInfo {
             margin: 0 0.5rem 0 0.5rem;
@@ -34,6 +34,12 @@
 
     .icons-container {
         display: inherit;
+
+        .social-media-icons {
+            margin: 0 0.25rem 0 0.25rem;
+            text-decoration: none;
+            color: whitesmoke;
+        }
     }
 
 }

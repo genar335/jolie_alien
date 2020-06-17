@@ -15,15 +15,15 @@ function Footer(props) {
             </div>
             <button id="subscribeBtn">subscribe for more</button>
             <div className="icons-container">
-                <InstagramIcon
-                    id="instagramIcon"
-                />
-                <TwitterIcon
-                    id="twitterIcon"
-                />
-                <FacebookIcon
-                    id="facebookIcon"
-                />
+                <Link to="/insta" className="social-media-icons">
+                    <InstagramIcon />
+                </Link>
+                <Link to="/twitter" className="social-media-icons">
+                    <TwitterIcon />
+                </Link>
+                <Link to="/facebook" className="social-media-icons">
+                    <FacebookIcon />
+                </Link>
             </div>
         </div>
     )

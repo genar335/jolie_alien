@@ -29,6 +29,26 @@ function App() {
           </div>
         )} />
 
+        {/* Social media routing */}
+
+        <Route exact path="/insta" render={() => {
+            window.location.href = "https://www.instagram.com"
+            return null
+          }
+        } />
+
+        <Route exact path="/twitter" render={() => {
+            window.location.href = "https://www.twitter.com"
+            return null
+          }
+        } />
+
+        <Route exact path="/facebook" render={() => {
+            window.location.href = "https://www.facebook.com"
+            return null
+          }
+        } />
+
         <Footer />
           
       </div>
