@@ -11,6 +11,9 @@ function Team(props) {
 
     return(
         <div className="team-main-container">
+            <div className="highlighted-member">
+                <h2 className="teams-heading">Наши преподаватели - компетентные диджеи, искренне заинтересованные в коммуникации с детьми и передачей им собственного опыта. Мы поддерживаем наших учеников, желающих развить сове увлечение до уровня успешной карьеры.</h2>
+            </div>
             <div className="plain-member">
                 <img src={nikita} alt="Никита Забелин" id="nikita"></img>
                 <h3>Никита Забелин</h3>
