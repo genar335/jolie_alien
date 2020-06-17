@@ -124,7 +124,7 @@ function Navbar() {
                         margin: "1.5rem 1.25rem 0 0",
                         width: "2rem",
                         height: "2rem",
-                        color: "white"
+                        //color: "white"
                     }}
                     onClick={() => setBurgerState(!burgerState)} />
 
