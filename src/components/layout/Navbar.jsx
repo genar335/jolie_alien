@@ -73,7 +73,8 @@ function Navbar() {
                         zIndex: 2,
                         margin: "1.5rem 1.25rem 0 0",
                         width: "2rem",
-                        height: "2rem"
+                        height: "2rem",
+                        color: "white"
                     }}
                     onClick={() => setBurgerState(!burgerState)} />
 
