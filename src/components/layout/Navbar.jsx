@@ -1,48 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import MenuIcon from '@material-ui/icons/Menu';
-//import Link from '@material-ui/core/Link'
+import MenuRoundedIcon from '@material-ui/icons/MenuRounded'
+import { useSpring, animated } from 'react-spring'
 import '../layoutStyles/Navbar.scss'
 
 function Navbar(props) {
-    const [anchorEl, setAnchorEl] = React.useState(null)
+   
+    const [burgerState, toggleState] = useState(false)
 
-    const handleClick = e => 
-        setAnchorEl(e.currentTarget)
-
-    const handleClose = () => 
-        setAnchorEl(null)
+    // animation settings
+    props = useSpring({
+        opacity: burgerState ? 1: 0
+    })
+    
 
     return(
         <div className="navbar-container" >
-            <h1 id="site-name" >Name of the thingy</h1>
-            <Button 
-                aria-controls="simple-menu" 
-                aria-haspopup 
-                onClick={handleClick}
+            <h1 id="site-name" >The Name</h1>
+            <MenuRoundedIcon
+                id="burger-icon"
+                style={{ 
+                    zIndex: 2,
+                    margin: "1.5rem 1.25rem 0 0",
+                    width: "2rem",
+                    height: "2rem"
+                }}
+                onClick={() => toggleState(!burgerState)}
+            />
+            {burgerState
+            ? <animated.div 
+                id="link-container"
+                style={props}
             >
-                <MenuIcon />
-            </Button>
-            <Menu 
-                id="fade-menu"
-                anchorEl={anchorEl}
-                keepMounted
-                open={Boolean(anchorEl)}
-                onClose={handleClose}
-            >
-                <MenuItem onClick={handleClose}>
-                    <Link to="/about">About</Link>
-                </MenuItem>
-                <MenuItem onClick={handleClose}>
-                    <Link to="/about">About</Link>
-                </MenuItem>
-                <MenuItem onClick={handleClose}>
-                    <Link to="/about">About</Link>
-                </MenuItem>
-            </Menu>
+                <Link to="/about">About</Link>
+                <Link to="/contact">Contact</Link>
+                <Link to="/faq">F.A.Q.</Link>
+             </animated.div>
+            : null
+            }
+            
         </div>
     )
 }

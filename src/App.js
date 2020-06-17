@@ -15,6 +15,18 @@ function App() {
             Hello
           </div>
         )} />
+
+        <Route exact path="/contact" render={props => (
+          <div>
+            Some contact info
+          </div>
+        )} />
+
+        <Route exact path="/faq" render={props => (
+          <div>
+            Faq 
+          </div>
+        )} />
           
       </div>
     </Router>
