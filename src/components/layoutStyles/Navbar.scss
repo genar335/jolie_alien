@@ -2,10 +2,11 @@
     display: flex;
     justify-content: space-between;
     z-index: 0;
-    background-color: rgb(247, 247, 243);
+    background-color: #17B890;
 
     #site-name {
         margin-left: 1rem;
+        color: #fff;
     }
 
     #burger-container {
@@ -45,4 +46,17 @@
 
             
     }
+}
+
+.navbar-container.about {
+    background-color: #FCE208;
+}
+.navbar-container.courses {
+    background-color: #205CE9;
+}
+.navbar-container.team{
+    background-color: #B41825;
+}
+.navbar-container.contact {
+    background-color: #9542E3;
 }

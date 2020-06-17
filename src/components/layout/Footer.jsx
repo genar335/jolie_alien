@@ -10,8 +10,8 @@ function Footer(props) {
     return(
         <div className="footer-container">
             <div className="contacts-container">
-                <p className="contactInfo">phone nr</p>
-                <p className="contactInfo">e-mail</p>
+                <p className="contactInfo">+7(916)1234567</p>
+                <p className="contactInfo">please@help.me</p>
             </div>
             <button id="subscribeBtn">subscribe for more</button>
             <div className="icons-container">
@@ -26,7 +26,7 @@ function Footer(props) {
                 </Link>
             </div>
         </div>
-    )
+    );
 
 }
 

@@ -8,7 +8,6 @@ function Navbar() {
    
     const [burgerState, setBurgerState] = useState(false)
 
-
     // animation for burger icon rotation
     const { degree } = useSpring({
         from: { degree: 0 },
@@ -23,15 +22,20 @@ function Navbar() {
         leave: { opacity: 0 }
     })
 
-
     // returning array of links
-    const listedLinks = ['', 'About', 'Courses', 'Team', 'Contact']
+    const listedLinks = [
+        { name: 'Home', url: ''},
+        { name: 'About', url: 'about'},
+        { name: 'Courses', url: 'courses'} ,
+        { name: 'Team', url: 'team'},
+        { name: 'Contact', url: 'contact' }
+    ]
     const Links = listedLinks.map(link => 
         <Link 
-            to={`/${link.toLowerCase()}`}
+            to={`/${link.url}`}
             onClick={() => setBurgerState(!burgerState)}
             /* className="nav-link" */>
-                {link}
+                {link.name}
         </Link>
     )
 
@@ -47,10 +51,12 @@ function Navbar() {
         },
         config
     })
-    
+
+    const classList = ["navbar-container"];
+    classList.push(window.location.pathname.replace(/\//g, ""));
 
     return(
-        <div className="navbar-container" >
+        <div className={classList.join(" ")} >
 
             <h1 id="site-name" >The Name</h1>
 
@@ -73,10 +79,11 @@ function Navbar() {
 
             </animated.div>
 
-            {transitionForOpacity.map(({item, key, props}) => (
+            {transitionForOpacity.map(({item, key, props}, i) => (
                 item && 
                     <animated.div 
                         id="link-container"
+                        key={i}
                         style={props}>   
                             <div id="links">
                                 {appearanceOfLinks.map(({x, ...rest}, index) => (
@@ -95,7 +102,7 @@ function Navbar() {
             ))}
             
         </div>
-    )
+    );
 }
 
 export default Navbar
