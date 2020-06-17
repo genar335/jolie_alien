@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import About from './components/About.jsx';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
@@ -18,9 +19,7 @@ function App() {
         )} />
 
         <Route exact path="/about" render={props => (
-          <div>
-            About the project
-          </div>
+          <About />
         )} />
 
         <Route exact path="/courses" render={props => (

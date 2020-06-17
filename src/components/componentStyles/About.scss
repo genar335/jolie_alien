@@ -1,0 +1,24 @@
+.abt-main-container {
+    margin: 0;
+    padding: 0;
+
+    .big-img-container {
+        padding: 0;
+        width: 100vw;
+
+        #abt-big-img {
+            width: 100%;
+            //background-size: cover;
+        }
+    }
+
+    .highlighted-text-div{
+        padding: 1rem 3rem 1rem 3rem;
+        background-color: #FFFBD7;
+    }
+
+    .regular-text-div{
+        padding: 1rem 3rem 1rem 3rem;
+        background-color: #fff;
+    }
+}
