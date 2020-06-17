@@ -15,20 +15,33 @@ function Team(props) {
                 <h2 className="teams-heading">Наши преподаватели - компетентные диджеи, искренне заинтересованные в коммуникации с детьми и передачей им собственного опыта. Мы поддерживаем наших учеников, желающих развить сове увлечение до уровня успешной карьеры.</h2>
             </div>
             <div className="plain-member">
-                <img src={nikita} alt="Никита Забелин" id="nikita"></img>
+                <img src={nikita} alt="Никита Забелин" id="nikita" className="portrait"></img>
                 <h3>Никита Забелин</h3>
                 <p>Никита Забелин - один из главных техно-диджеев, основатель объединения Resonance, а также участник различных фестивалей и московского Boiler Room.</p>
             </div>
+
             <div className="highlighted-member">
-                <img src={kira} alt="Кира Моторина" id="kira"></img>
+                <svg id="big-yellow-circle" width="320" height="320" >
+                    <circle 
+                        cx="160"
+                        cy="160" 
+                        r="160" 
+                        stroke="none" 
+                        fill="yellow"
+                        id="css-circle-yellow" />
+                </svg>
+                
+                <img src={kira} alt="Кира Моторина" id="kira" className="portrait"></img>
                 <h3>Кира Моторина</h3>
                 <p>Кира Моторина - известный диджей, мастер направления smooth jazz, один из создателей независимого питерского радио TESTFM и частый участник лондонского онлайн-радио NTS.</p>
             </div>
+
             <div className="plain-member">
-                <img src={viktor} alt="Виктор Цой" id="viktor"></img>
+                <img src={viktor} alt="Виктор Цой" id="viktor" className="portrait"></img>
                 <h3>Виктор Цой</h3>
                 <p>Виктор Цой - еще один создатель питерского радио TESTFM, бывший резидент известных клубов Санкт-Петербурга.</p>
             </div>
+
         </div>
     );
 }
