@@ -11,6 +11,12 @@ function App() {
       <div className="App">
         <Navbar />
 
+        <Route exact path="/" render={props => (
+          <div>
+            Home
+          </div>
+        )} />
+
         <Route exact path="/about" render={props => (
           <div>
             About the project
