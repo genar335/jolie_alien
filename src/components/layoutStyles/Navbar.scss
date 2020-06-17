@@ -8,6 +8,8 @@ $navigation-color: #1B1725;
     top: 0;
     position: fixed;
     width: 100%;
+    transition: top 0.5s;
+    
 
     #site-name {
         margin-left: 1rem;
@@ -30,6 +32,7 @@ $navigation-color: #1B1725;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        overflow-y: hidden;
         
         
             #links {
