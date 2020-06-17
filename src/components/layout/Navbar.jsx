@@ -1,16 +1,19 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded'
-import { useSpring, animated } from 'react-spring'
+import { useTransition, useSpring, animated } from 'react-spring'
 import '../layoutStyles/Navbar.scss'
 
 function Navbar(props) {
    
-    const [burgerState, toggleState] = useState(false)
+    const [burgerState, setBurgerState] = useState(false)
 
-    // animation settings
-    props = useSpring({
-        opacity: burgerState ? 1: 0
+    // animation settings for 
+    // burger insides appearance
+    const transitionForOpacity = useTransition(burgerState, null, {
+        from: { opacity: 0 },
+        enter: { opacity: 1 },
+        leave: { opacity: 0 }
     })
     
 
@@ -23,21 +26,21 @@ function Navbar(props) {
                     zIndex: 2,
                     margin: "1.5rem 1.25rem 0 0",
                     width: "2rem",
-                    height: "2rem"
+                    height: "2rem",
                 }}
-                onClick={() => toggleState(!burgerState)}
+                onClick={() => setBurgerState(!burgerState)}
             />
-            {burgerState
-            ? <animated.div 
-                id="link-container"
-                style={props}
-            >
-                <Link to="/about">About</Link>
-                <Link to="/contact">Contact</Link>
-                <Link to="/faq">F.A.Q.</Link>
-             </animated.div>
-            : null
-            }
+            {transitionForOpacity.map(({item, key, props}) => (
+                item && 
+                    <animated.div 
+                        id="link-container"
+                        style={props}
+                    >
+                        <Link to="/about">About</Link>
+                        <Link to="/contact">Contact</Link>
+                        <Link to="/faq">F.A.Q.</Link>
+                    </animated.div>
+            ))}
             
         </div>
     )
