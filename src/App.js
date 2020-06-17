@@ -13,19 +13,25 @@ function App() {
 
         <Route exact path="/about" render={props => (
           <div>
-            Hello
+            About the project
+          </div>
+        )} />
+
+        <Route exact path="/courses" render={props => (
+          <div>
+            all the courses
+          </div>
+        )} />
+
+        <Route exact path="/team" render={props => (
+          <div>
+            team info
           </div>
         )} />
 
         <Route exact path="/contact" render={props => (
           <div>
             Some contact info
-          </div>
-        )} />
-
-        <Route exact path="/faq" render={props => (
-          <div>
-            Faq 
           </div>
         )} />
 

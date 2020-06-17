@@ -4,7 +4,7 @@ import MenuRoundedIcon from '@material-ui/icons/MenuRounded'
 import { useTransition, useSpring, animated } from 'react-spring'
 import '../layoutStyles/Navbar.scss'
 
-function Navbar(props) {
+function Navbar() {
    
     const [burgerState, setBurgerState] = useState(false)
 
@@ -58,17 +58,24 @@ function Navbar(props) {
                             About
                         </Link>
                         <Link 
+                            to="/courses"
+                            onClick={() => setBurgerState(!burgerState)}
+                        >
+                            Courses
+                        </Link>
+                        <Link 
+                            to="/team"
+                            onClick={() => setBurgerState(!burgerState)}
+                        >
+                            Team/Staff
+                        </Link>
+                        <Link 
                             to="/contact"
                             onClick={() => setBurgerState(!burgerState)}
                         >
                             Contact
-                        </Link>
-                        <Link 
-                            to="/faq"
-                            onClick={() => setBurgerState(!burgerState)}
-                        >
-                            F.A.Q.
-                        </Link>
+                        </Link> 
+                    
                     </animated.div>
             ))}
             
