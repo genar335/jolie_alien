@@ -4,24 +4,57 @@ $team-highlight-color: #FADBDE;
 .team-main-container {
     margin-top: 10vh;
     padding: 0;
+    z-index: 0;
+
+    #big-yellow-circle {
+        width: auto;
+        height: auto;
+        position: absolute;
+        left: -20%;
+        top: -10%;
+        z-index: 2;
+
+        #css-circle-yellow {
+            position: relative;
+            opacity: 0.3;
+        }
+    }
 
     .highlighted-member {
         background-color: $team-highlight-color;
         padding: 1rem 3rem 1rem 3rem;
+        position: relative;
+        z-index: 1;
+
+        h3 {
+            position: relative;
+            z-index: 3;
+        }
+
+        p {
+            position: relative;
+            z-index: 3;
+        }
 
         #kira {
-            width: 30%;
+            position: relative;
+            z-index: 3;
         }
     }
+
     .plain-member {
         background-color: #fff;
         padding: 1rem 3rem 1rem 3rem;
-
+        height: auto;
+        
         #nikita {
-            width: 30%;
+            box-shadow: 0.5rem 0.2rem 0rem #9542e380;
         }
-        #viktor {
-            width: 30%;
-        }
+    }
+    .portrait {
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.5);
+        width: 10rem;
+        height: 10rem;
     }
 }
