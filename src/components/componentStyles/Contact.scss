@@ -1,0 +1,55 @@
+#contact-container {
+    margin: 0vh 0rem 0 0rem;
+    width: 100vw;
+    height: 84.24vh;
+    position: relative;
+    overflow: hidden;
+    padding-top: 5rem;
+    text-align: center;
+
+
+    #big-light-red-circle {
+        position: absolute;
+        left: 10vw;
+        top: 20%;
+
+        #css-circle-red {
+            opacity: 0.3;
+        }
+    }
+
+    #big-light-green-circle {
+        position: absolute;
+        left: 40%;
+        top: 55%;
+
+        #css-circle-green {
+            opacity: 0.3;
+        }
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 35%;
+        left: 16%;
+
+        a {
+            text-decoration: none;
+            margin-top: 1rem;
+            color: black;
+            font-size: 1.5rem;
+        }
+    }
+
+    #big-light-grey-circle {
+        position: absolute;
+        left: -1rem;
+        top: 80%;
+
+        #css-circle-grey {
+            opacity: 0.3;
+        }
+    }
+}

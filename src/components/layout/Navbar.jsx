@@ -6,7 +6,6 @@ import '../layoutStyles/Navbar.scss'
 
 const listedLinks = [
     { name: 'ХОПЛЯ', url: 'about'},
-    { name: 'О нас', url: 'about'},
     { name: 'Курсы', url: 'courses'} ,
     { name: 'Команда', url: 'team'},
     { name: 'Контакты', url: 'contact' }
@@ -50,7 +49,6 @@ function Navbar() {
     }
 
     useEffect(() => {
-        document.title = `${window.scrollY}`
         window.addEventListener('scroll', (() => handleScroll() ))
         return window.removeEventListener('scroll', function(e) { console.log(123) })
     }, [null])
