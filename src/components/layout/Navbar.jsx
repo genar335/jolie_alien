@@ -51,9 +51,24 @@ function Navbar(props) {
                         id="link-container"
                         style={props}
                     >
-                        <Link to="/about">About</Link>
-                        <Link to="/contact">Contact</Link>
-                        <Link to="/faq">F.A.Q.</Link>
+                        <Link 
+                            to="/about"
+                            onClick={() => setBurgerState(!burgerState)}
+                        >
+                            About
+                        </Link>
+                        <Link 
+                            to="/contact"
+                            onClick={() => setBurgerState(!burgerState)}
+                        >
+                            Contact
+                        </Link>
+                        <Link 
+                            to="/faq"
+                            onClick={() => setBurgerState(!burgerState)}
+                        >
+                            F.A.Q.
+                        </Link>
                     </animated.div>
             ))}
             
