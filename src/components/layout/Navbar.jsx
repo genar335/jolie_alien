@@ -8,6 +8,13 @@ function Navbar(props) {
    
     const [burgerState, setBurgerState] = useState(false)
 
+
+    // animation for burger icon rotation
+    const { degree } = useSpring({
+        from: { degree: 0 },
+        degree: burgerState ? 360 : 0
+    })
+
     // animation settings for 
     // burger insides appearance
     const transitionForOpacity = useTransition(burgerState, null, {
@@ -20,16 +27,24 @@ function Navbar(props) {
     return(
         <div className="navbar-container" >
             <h1 id="site-name" >The Name</h1>
-            <MenuRoundedIcon
-                id="burger-icon"
-                style={{ 
-                    zIndex: 2,
-                    margin: "1.5rem 1.25rem 0 0",
-                    width: "2rem",
-                    height: "2rem",
+            <animated.div 
+                id="burger-container"
+                style={{
+                    transform: degree.interpolate(degree => `rotate(${degree}deg)`),
+                    opacity: 1
                 }}
-                onClick={() => setBurgerState(!burgerState)}
-            />
+            >
+                <MenuRoundedIcon
+                    id="burger-icon"
+                    style={{ 
+                        zIndex: 2,
+                        margin: "1.5rem 1.25rem 0 0",
+                        width: "2rem",
+                        height: "2rem"
+                    }}
+                    onClick={() => setBurgerState(!burgerState)}
+                />
+            </animated.div>
             {transitionForOpacity.map(({item, key, props}) => (
                 item && 
                     <animated.div 

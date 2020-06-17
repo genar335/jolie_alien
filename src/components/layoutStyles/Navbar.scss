@@ -7,6 +7,10 @@
         margin-left: 1rem;
     }
 
+    #burger-container {
+        z-index: 2;
+    }
+
     #link-container {
         background-color: grey;
         position: absolute;
