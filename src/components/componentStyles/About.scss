@@ -1,3 +1,6 @@
+$abt-main-color: #FCE208;
+$abt-highlight-color: #FFFBD7;
+
 .abt-main-container {
     margin: 0;
     padding: 0;
@@ -14,7 +17,7 @@
 
     .highlighted-text-div{
         padding: 1rem 3rem 1rem 3rem;
-        background-color: #FFFBD7;
+        background-color: $abt-highlight-color;
     }
 
     .regular-text-div{

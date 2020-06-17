@@ -2,9 +2,9 @@ import React from 'react';
 import './componentStyles/About.scss';
 import testPic from '../GAssets/testPic.jpg'
 
-function About() {
+function About(props) {
 
-    
+    //here be the fun stuff
 
     return(
         <div className="abt-main-container">
