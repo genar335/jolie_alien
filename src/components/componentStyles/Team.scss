@@ -2,7 +2,7 @@ $team-main-color: #B41825;
 $team-highlight-color: #FADBDE;
 
 .team-main-container {
-    margin-top: 10vh;
+    margin-top: 11vh;
     padding: 0;
     z-index: 0;
 
@@ -11,7 +11,7 @@ $team-highlight-color: #FADBDE;
         height: auto;
         position: absolute;
         left: -20%;
-        top: -10%;
+        top: -25%;
         z-index: 2;
 
         #css-circle-yellow {
@@ -50,10 +50,13 @@ $team-highlight-color: #FADBDE;
         #nikita {
             box-shadow: 0.5rem 0.2rem 0rem #9542e380;
         }
+        #viktor {
+            box-shadow: 0.5rem 0.2rem 0rem #9542e380;
+        }
     }
+    
     .portrait {
         border-radius: 50%;
-        box-shadow: rgba(0, 0, 0, 0.5);
         width: 10rem;
         height: 10rem;
     }

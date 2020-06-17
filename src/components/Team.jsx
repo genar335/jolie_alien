@@ -18,8 +18,6 @@ function Team(props) {
                 <p>Никита Забелин - один из главных техно-диджеев, основатель объединения Resonance, а также участник различных фестивалей и московского Boiler Room.</p>
             </div>
 
-            
-
             <div className="highlighted-member">
                 <svg id="big-yellow-circle" width="320" height="320" >
                     <circle 
@@ -30,6 +28,7 @@ function Team(props) {
                         fill="yellow"
                         id="css-circle-yellow" />
                 </svg>
+                
                 <img src={kira} alt="Кира Моторина" id="kira" className="portrait"></img>
                 <h3>Кира Моторина</h3>
                 <p>Кира Моторина - известный диджей, мастер направления smooth jazz, один из создателей независимого питерского радио TESTFM и частый участник лондонского онлайн-радио NTS.</p>
