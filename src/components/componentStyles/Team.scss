@@ -1,3 +1,27 @@
+$team-main-color: #B41825;
+$team-highlight-color: #FADBDE;
+
 .team-main-container {
-    display: flex;
+    margin: 0;
+    padding: 0;
+
+    .highlighted-member {
+        background-color: $team-highlight-color;
+        padding: 1rem 3rem 1rem 3rem;
+
+        #kira {
+            width: 30%;
+        }
+    }
+    .plain-member {
+        background-color: #fff;
+        padding: 1rem 3rem 1rem 3rem;
+
+        #nikita {
+            width: 30%;
+        }
+        #viktor {
+            width: 30%;
+        }
+    }
 }
