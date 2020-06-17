@@ -17,7 +17,7 @@ function Heading({url}) {
     return (
         <h1 className="site-name">
             {
-            (listedLinks.find(link=>link.url===url)||{name:"not found"}).name
+            (listedLinks.find(link => link.url === url) || {name: "not found"}).name
             }
         </h1>
     )

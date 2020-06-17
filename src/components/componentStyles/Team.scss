@@ -21,7 +21,7 @@ $team-highlight-color: #FADBDE;
     }
 
     .highlighted-member {
-        background-color: $team-highlight-color;
+        /* background-color: $team-highlight-color; */
         padding: 1rem 3rem 1rem 3rem;
         position: relative;
         z-index: 1;
@@ -39,6 +39,7 @@ $team-highlight-color: #FADBDE;
         #kira {
             position: relative;
             z-index: 3;
+            
         }
     }
 
@@ -51,7 +52,7 @@ $team-highlight-color: #FADBDE;
             box-shadow: 0.5rem 0.2rem 0rem #9542e380;
         }
         #viktor {
-            box-shadow: 0.5rem 0.2rem 0rem #9542e380;
+            box-shadow: 0.5rem 0.4rem 0rem 0.5rem #9542e380;
         }
     }
     

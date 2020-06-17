@@ -1,25 +1,26 @@
-$navigation-color: #1B1725;
+$navigation-color: #514c5f;
 
 .navbar-container {
     display: flex;
     justify-content: space-between;
     z-index: 3;
-    background-color: #17B890;
+    /* background-color: #17B890; */
     top: 0;
     position: fixed;
     width: 100%;
     transition: top 0.5s;
-    
+    color: black;
 
     h1.site-name {
         margin-left: 1rem;
-        color: #fff;
+
     }
 
     #burger-container {
         z-index: 6;
         /* position: fixed;
         right: 0; */
+        color: black;
     }
 
     #link-container {
@@ -59,14 +60,14 @@ $navigation-color: #1B1725;
 }
 
 .navbar-container.about {
-    background-color: #FCE208;
+    /* background-color: #FCE208; */
 }
 .navbar-container.courses {
-    background-color: #205CE9;
+    /* background-color: #205CE9; */
 }
 .navbar-container.team{
-    background-color: #B41825;
+    /* background-color: #b41825; */
 }
 .navbar-container.contact {
-    background-color: #9542E3;
+    /* background-color: #9542E3; */
 }
