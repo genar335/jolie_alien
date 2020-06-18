@@ -20,9 +20,15 @@ $team-highlight-color: #FADBDE;
         }
     }
 
+    h2.teams-heading {
+        font-weight: 230;
+        padding: 0;
+        list-style: square;
+    }
+
     .highlighted-member {
         /* background-color: $team-highlight-color; */
-        padding: 1rem 3rem 1rem 3rem;
+        padding: 1rem 1.7rem;
         position: relative;
         z-index: 1;
 
@@ -42,10 +48,11 @@ $team-highlight-color: #FADBDE;
             
         }
 
-        h2.teams-heading {
-            font-weight: 230;
-        }
+        
+        
     }
+
+    
 
     .plain-member {
         background-color: #fff;
