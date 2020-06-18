@@ -43,3 +43,53 @@
     }
 
 }
+
+@media only screen and (min-width: 768px) {
+    .footer-container {
+
+        background-color: #000;
+        color: #fff;
+    
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: static;
+        bottom: 0;
+        width: 100vw;
+        height: 8rem;
+    
+        .contacts-container {
+    
+            display: flex;
+            flex-direction: column;
+    
+            .contactInfo {
+                font-size: 1.2rem;
+                margin: 0.2rem 0.5rem 0.2rem 0.5rem;
+            }
+    
+        }
+    
+        #subscribeBtn {
+            background-color: #000;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            width: 9rem;
+            height: 4rem;
+            font-size: 1.4rem;
+        }
+    
+        .icons-container {
+            display: inherit;
+    
+            .social-media-icons {
+                text-decoration: none;
+                color: #fff;
+            }
+    
+        }
+    
+    }
+}

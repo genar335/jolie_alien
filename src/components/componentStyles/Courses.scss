@@ -59,6 +59,135 @@ $courses-highlight-color: #DAE4FB;
             margin-left: 1rem;
         }        
     } 
+}
+
+@media only screen and (min-width: 768px) {
+    $courses-main-color: #205CE9;
+    $courses-highlight-color: #DAE4FB;
+
+    .courses-main-container {
+        margin-top: 18vh;
+        height: 69.5vh;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        /* .highlighted-course-block {
+            background-color: $courses-highlight-color;
+            padding: 1rem 1rem 1rem 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+        */
+
+        #big-purple-circle {
+            width: auto;
+            height: auto;
+            position: absolute;
+            left: -25%;
+            top: 10%;
+            z-index: 2;
+
+            #css-circle-purple {
+                position: relative;
+                opacity: 0.2;
+            }
+        }
+
+        #big-yellow-circle {
+            width: auto;
+            height: auto;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 2;
+
+            #css-circle-yellow {
+                position: relative;
+                opacity: 0.15;
+            }
+        }
+
+        .plain-course-block {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            font-size: 1.3rem;
+            padding: 0 3rem;
+            z-index: 3;
+
+            li {
+                margin-left: 1rem;
+            }        
+        } 
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    $courses-main-color: #205CE9;
+    $courses-highlight-color: #DAE4FB;
     
+    .courses-main-container {
+        margin-top: 25vh;
+        height: 66.25vh;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
     
+        /* .highlighted-course-block {
+            background-color: $courses-highlight-color;
+            padding: 1rem 1rem 1rem 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+        */
+    
+        #big-purple-circle {
+            width: auto;
+            height: auto;
+            position: absolute;
+            left: -10%;
+            top: 1%;
+            z-index: 2;
+    
+            #css-circle-purple {
+                position: relative;
+                opacity: 0.2;
+            }
+        }
+    
+        #big-yellow-circle {
+            width: auto;
+            height: auto;
+            position: absolute;
+            left: 70%;
+            top: 50%;
+            z-index: 2;
+    
+            #css-circle-yellow {
+                position: relative;
+                opacity: 0.3;
+            }
+        }
+    
+        .plain-course-block {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            padding: 0 3rem;
+            z-index: 3;
+    
+            li {
+                margin-left: 1rem;
+            }        
+        } 
+    }
 }

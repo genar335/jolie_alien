@@ -7,11 +7,11 @@ function Courses(props) {
 
     return(
         <div className="courses-main-container">
-            <svg id="big-purple-circle" width="260" height="260" >
+            <svg id="big-purple-circle" width="340" height="340" >
                 <circle 
-                    cx="130"
-                    cy="130" 
-                    r="130" 
+                    cx="170"
+                    cy="170" 
+                    r="170" 
                     stroke="none" 
                     fill="red"
                     id="css-circle-purple" />
@@ -22,11 +22,11 @@ function Courses(props) {
                 <li>Cведение единой музыкальной дорожки из альтернативных музыкальных источников</li>
                 <li>Oбучение игре на виниловых пластинках</li>
             </div>
-            <svg id="big-yellow-circle" width="500" height="500" >
+            <svg id="big-yellow-circle" width="600" height="600" >
                 <circle 
-                    cx="250"
-                    cy="250" 
-                    r="250" 
+                    cx="300"
+                    cy="300" 
+                    r="300" 
                     stroke="none" 
                     fill="yellow"
                     id="css-circle-yellow" />

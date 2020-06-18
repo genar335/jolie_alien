@@ -16,13 +16,26 @@ function Footer(props) {
             <button id="subscribeBtn">subscribe for more</button>
             <div className="icons-container">
                 <Link to="/insta" className="social-media-icons">
-                    <InstagramIcon />
+                    <InstagramIcon 
+                        style={{
+                            width: "3rem",
+                            height: "3rem"
+                        }}
+                    />
                 </Link>
                 <Link to="/twitter" className="social-media-icons">
-                    <TwitterIcon />
+                    <TwitterIcon
+                    style={{
+                        width: "3rem",
+                        height: "3rem"
+                    }} />
                 </Link>
                 <Link to="/facebook" className="social-media-icons">
-                    <FacebookIcon />
+                    <FacebookIcon
+                    style={{
+                        width: "3rem",
+                        height: "3rem"
+                    }} />
                 </Link>
             </div>
         </div>

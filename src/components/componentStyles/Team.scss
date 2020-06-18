@@ -73,3 +73,163 @@ $team-highlight-color: #FADBDE;
         height: 10rem;
     }
 }
+
+@media only screen and (min-width: 768px) {
+    $team-main-color: #B41825;
+    $team-highlight-color: #FADBDE;
+    
+    .team-main-container {
+        margin-top: 15vh;
+        padding: 0;
+        z-index: 0;
+    
+        #big-yellow-circle {
+            width: auto;
+            height: auto;
+            position: absolute;
+            left: -30%;
+            top: -25%;
+            z-index: 2;
+    
+            #css-circle-yellow {
+                position: relative;
+                opacity: 0.3;
+            }
+        }
+    
+        h2.teams-heading {
+            font-weight: 230;
+            padding: 0;
+            list-style: square;
+        }
+    
+        .highlighted-member {
+            /* background-color: $team-highlight-color; */
+            padding: 1rem 5rem;
+            position: relative;
+            z-index: 1;
+            font-size: 1.2rem;
+    
+            h3 {
+                position: relative;
+                z-index: 3;
+            }
+    
+            p {
+                position: relative;
+                z-index: 3;
+            }
+    
+            #kira {
+                position: relative;
+                z-index: 3;
+                
+            }
+    
+            
+            
+        }
+    
+        
+    
+        .plain-member {
+            background-color: #fff;
+            padding: 1rem 5rem;
+            height: auto;
+            font-size: 1.2rem;
+            
+            #nikita {
+                box-shadow: 0.5rem 0.2rem 0rem #9542e380;
+            }
+            #viktor {
+                box-shadow: 0.5rem 0.4rem 0rem 0.5rem #9542e380;
+            }
+        }
+        
+        .portrait {
+            border-radius: 50%;
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    $team-main-color: #B41825;
+    $team-highlight-color: #FADBDE;
+    
+    .team-main-container {
+        margin-top: 25vh;
+        padding: 0;
+        z-index: 0;
+    
+        #big-yellow-circle {
+            width: auto;
+            height: auto;
+            position: absolute;
+            left: -20%;
+            top: -25%;
+            z-index: 2;
+    
+            #css-circle-yellow {
+                position: relative;
+                opacity: 0.3;
+            }
+        }
+    
+        h2.teams-heading {
+            font-weight: 230;
+            padding: 0;
+            list-style: square;
+        }
+    
+        .highlighted-member {
+            /* background-color: $team-highlight-color; */
+            padding: 1rem 1.7rem;
+            position: relative;
+            z-index: 1;
+            margin: 0 10rem;
+    
+            h3 {
+                position: relative;
+                z-index: 3;
+            }
+    
+            p {
+                position: relative;
+                z-index: 3;
+            }
+    
+            #kira {
+                position: relative;
+                z-index: 3;
+
+            }
+    
+            
+            
+        }
+    
+        
+    
+        .plain-member {
+            background-color: #fff;
+            padding: 1rem 3rem 1rem 3rem;
+            height: auto;
+            margin: 0 10rem;
+            
+            #nikita {
+                box-shadow: 0.5rem 0.2rem 0rem #9542e380;
+            }
+            #viktor {
+                box-shadow: 0.5rem 0.4rem 0rem 0.5rem #9542e380;
+            }
+        }
+        
+        .portrait {
+            border-radius: 50%;
+            width: 10rem;
+            height: 10rem;
+        }
+    }    
+}

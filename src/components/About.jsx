@@ -14,11 +14,11 @@ function About(props) {
                 <img src={babyOne} alt="kartinka" id="abt-big-img"/>
             </div>
             <div className="plain-text-div">
-                <svg id="big-blue-circle" width="260" height="260" >
+                <svg id="big-blue-circle" width="800" height="800" >
                         <circle 
-                            cx="130"
-                            cy="130" 
-                            r="130" 
+                            cx="400"
+                            cy="400" 
+                            r="400" 
                             stroke="none" 
                             fill="blue"
                             id="css-circle-blue" />
@@ -26,11 +26,11 @@ function About(props) {
                 <h2 className="about-header">Школа диджеинга "Хопля" это пространство для детей и подростков, где обучение является экспериментом.</h2>
             </div>
             <div className="plain-text-div">
-                <svg id="big-light-blue-circle" width="460" height="460" >
+                <svg id="big-light-blue-circle" width="640" height="640" >
                         <circle 
-                            cx="230"
-                            cy="230" 
-                            r="230" 
+                            cx="320"
+                            cy="320" 
+                            r="320" 
                             stroke="none" 
                             fill="#dae4fb"
                             id="css-circle-ligh-blue" />
@@ -47,11 +47,11 @@ function About(props) {
             <img src={babyNAdult} alt="Бэбик, но ещё больше" id="babby-and-adult" />
 
             <div className="plain-text-div">
-                <svg id="big-blue-circle-two" width="260" height="260" >
+                <svg id="big-blue-circle-two" width="560" height="560" >
                     <circle 
-                        cx="130"
-                        cy="130" 
-                        r="130" 
+                        cx="280"
+                        cy="280" 
+                        r="280" 
                         stroke="none" 
                         fill="blue"
                         id="css-circle-blue-two" />
@@ -59,11 +59,11 @@ function About(props) {
                 <p>Сегодня музыка является универсальным языком, способным объединять единомышленников по всеми миру. Именно поэтому альтернативное обучение музыке способно развить и расширить круг общения вашего ребенка, что немаловажно для здорового роста эмоционального интелекта.</p>
             </div>
             <div className="plain-text-div">
-                <svg id="big-light-blue-circle-two" width="460" height="460" >
+                <svg id="big-light-blue-circle-two" width="560" height="560" >
                     <circle 
-                        cx="230"
-                        cy="230" 
-                        r="230" 
+                        cx="280"
+                        cy="280" 
+                        r="280" 
                         stroke="none" 
                         fill="#dae4fb"
                         id="css-circle-ligh-blue-two" />

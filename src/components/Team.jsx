@@ -21,11 +21,11 @@ function Team(props) {
             </div>
 
             <div className="highlighted-member">
-                <svg id="big-yellow-circle" width="320" height="320" >
+                <svg id="big-yellow-circle" width="440" height="440" >
                     <circle 
-                        cx="160"
-                        cy="160" 
-                        r="160" 
+                        cx="220"
+                        cy="220" 
+                        r="220" 
                         stroke="none" 
                         fill="yellow"
                         id="css-circle-yellow" />
