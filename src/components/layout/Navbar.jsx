@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded'
 import { useTransition, useSpring, useTrail, animated, config } from 'react-spring'
 import '../layoutStyles/Navbar.scss'
+import Logo from '../../GAssets/Hooplja_logo.svg'
+import MenuIcon from '../../GAssets/menu.svg'
 
 const listedLinks = [
     { name: 'ХОПЛЯ', url: 'about'},
@@ -32,7 +34,7 @@ function Navbar() {
     const handleScroll = (e) => {
         //console.log(window.scrollY)
         
-        if (prevScroll > window.pageYOffset) {
+        /* if (prevScroll > window.pageYOffset) {
             setNavPosition(0) 
             if (document.getElementById('link-container')) {
                 document.getElementById('link-container').style.marginTop = "0rem"
@@ -45,7 +47,9 @@ function Navbar() {
                 console.log('up')
             }
         }
-        prevScroll = window.pageYOffset
+        prevScroll = window.pageYOffset */
+
+        setBurgerState(false)
     }
 
     useEffect(() => {
@@ -106,7 +110,8 @@ function Navbar() {
             }}
             >
         
-            <Heading url={url} />
+            {/* <Heading url={url} /> */}
+            <img src={Logo} alt="logo" id="site-logo" />
 
             <animated.div 
                 id="burger-container"
@@ -114,18 +119,8 @@ function Navbar() {
                     transform: degree.interpolate(degree => `rotate(${degree}deg)`),
                     opacity: 1
                 }}>
-
-                <MenuRoundedIcon
-                    id="burger-icon"
-                    style={{ 
-                        zIndex: 2,
-                        margin: "1.5rem 1.25rem 0 0",
-                        width: "2rem",
-                        height: "2rem",
-                        //color: "white"
-                    }}
-                    onClick={() => setBurgerState(!burgerState)} />
-
+                    <img src={MenuIcon} alt="Menu" id="burgerIcon"
+                        onClick={() => setBurgerState(!burgerState)} />
             </animated.div>
 
             {transitionForOpacity.map(({item, key, props}, i) => (

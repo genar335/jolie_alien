@@ -3,15 +3,75 @@ $abt-highlight-color: #FFFBD7;
 
 .abt-main-container {
     margin: 10vh 0 0 0;
-    padding: 0;
-
+    position: relative;
+    overflow: hidden;
+    
     .big-img-container {
-        padding: 0;
         width: 100vw;
+        margin-top: 5rem;
 
         #abt-big-img {
             width: 100%;
-            //background-size: cover;
+            border-radius: 50%;
+            filter: grayscale(100%);
+            background-size: cover;
+        }
+    }
+
+    #big-blue-circle {
+        width: auto;
+        height: auto;
+        position: absolute;
+        left: -30%;
+        top: 20%;
+        z-index: 2;
+
+        #css-circle-blue {
+            position: relative;
+            opacity: 0.3;
+        }
+    }
+
+    #big-light-blue-circle {
+        width: auto;
+        height: auto;
+        position: absolute;
+        left: 30%;
+        top: 30%;
+        z-index: 2;
+
+        #css-circle-light-blue {
+            position: relative;
+            opacity: 0.3;
+        }
+    }
+
+    #big-blue-circle-two {
+        width: auto;
+        height: auto;
+        position: absolute;
+        left: -20%;
+        top: 77%;
+        z-index: 2;
+
+        #css-circle-blue-two {
+            position: relative;
+            opacity: 0.2;
+            filter: hue-rotate(98deg);
+        }
+    }
+
+    #big-light-blue-circle-two {
+        width: auto;
+        height: auto;
+        position: absolute;
+        left: 35%;
+        top: 85%;
+        z-index: 2;
+
+        #css-circle-light-blue-two {
+            position: relative;
+            opacity: 0.3;
         }
     }
 
@@ -26,6 +86,33 @@ $abt-highlight-color: #FFFBD7;
 
         h2.about-header{
             font-weight: 230;
+            position: relative;
+            z-index: 3;
         }
+
+        p {
+            position: relative;
+            z-index: 3;
+        }
+    }
+
+    #bigger-Baby{
+        position: relative;
+        z-index: 3;
+        width: 100vw;
+        border-radius: 50%;
+        object-fit: cover;
+        height: 100vw;
+        filter: grayscale(100%);
+    }
+
+    #babby-and-adult{
+        position: relative;
+        z-index: 3;
+        width: 100vw;
+        border-radius: 50%;
+        object-fit: cover;
+        height: 100vw;
+        filter: grayscale(100%);
     }
 }

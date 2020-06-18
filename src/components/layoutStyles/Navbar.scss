@@ -3,24 +3,31 @@ $navigation-color: #514c5f;
 .navbar-container {
     display: flex;
     justify-content: space-between;
-    z-index: 3;
+    z-index: 10;
     background-color: white;
     top: 0;
-    position: fixed;
-    width: 100vw;
+    position: absolute;
+    width: 100%;
     transition: top 0.5s;
     color: black;
 
-    h1.site-name {
-        margin-left: 1rem;
 
+    #site-logo{
+        width: 5rem;
+        height: 5rem;
+        margin: 0.3rem 0 0 0.3rem;
     }
+   
 
     #burger-container {
         z-index: 6;
-        /* position: fixed;
-        right: 0; */
+        position: absolute;
+        right: 0; 
+        width: 2.5rem;
+        height: 2.5rem;
         color: black;
+        align-self: center;
+        margin-right: 0.7rem;
     }
 
     #link-container {
